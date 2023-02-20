@@ -1,0 +1,9 @@
+<h2 mat-dialog-title *ngIf="Header.length > 0">{{Header}}</h2>
+<mat-dialog-content class="mat-typography">
+  <h3 *ngIf="Subheader.length > 0">{{Subheader}}</h3>
+  <p *ngIf="Content.length > 0">{{Content}}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button *ngIf="isCancellable" mat-button mat-dialog-close>{{CancelText}}</button>
+  <button *ngIf="isAcceptable" mat-button [mat-dialog-close]="true" cdkFocusInitial>{{ConfirmText}}</button>
+</mat-dialog-actions>
