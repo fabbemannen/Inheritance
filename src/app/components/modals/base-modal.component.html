@@ -2,6 +2,7 @@
 <mat-dialog-content class="mat-typography">
   <h3 *ngIf="Subheader.length > 0">{{Subheader}}</h3>
   <p *ngIf="Content.length > 0">{{Content}}</p>
+  <ng-content></ng-content>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button *ngIf="isCancellable" mat-button mat-dialog-close>{{CancelText}}</button>
